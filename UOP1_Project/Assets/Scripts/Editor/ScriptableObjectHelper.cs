@@ -6,8 +6,7 @@ public static class ScriptableObjectHelper
 	public static void GenerateButtonsForEvents<T>(UnityEngine.Object target)
 		where T : ScriptableObject
 	{
-		var targetIr = target as T;
-		if (targetIr != null)
+		if (target is T targetIr)
 		{
 			var typeIr = targetIr.GetType();
 			var events = typeIr.GetEvents();
